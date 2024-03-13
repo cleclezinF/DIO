@@ -16,6 +16,9 @@ while True:
     #OPERAÇÃO-DEPÓSITO
     if opcao == 'D':
         deposito = float(input("Depósito: "))
+        while deposito < 0:
+            deposito = float(input('Não é possível depositar valores negativos. Tente novamente: '))
+
         extrato.append(("+"+str(deposito)))
         saldo += deposito
     
